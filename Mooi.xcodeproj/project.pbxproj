@@ -19,6 +19,8 @@
 		0B545DFA293A15A70060175C /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B545DF9293A15A70060175C /* AudioManager.swift */; };
 		0B545DFC293A1AAB0060175C /* meditation1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B545DFB293A1AAA0060175C /* meditation1.mp3 */; };
 		0B545E01293A363A0060175C /* Meditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B545E00293A363A0060175C /* Meditation.swift */; };
+		0B545E06293A38540060175C /* GreedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B545E05293A38540060175C /* GreedView.swift */; };
+		0B545E08293A39CC0060175C /* GreedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B545E07293A39CC0060175C /* GreedCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		0B545DFB293A1AAA0060175C /* meditation1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = meditation1.mp3; sourceTree = "<group>"; };
 		0B545DFD293A1B620060175C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0B545E00293A363A0060175C /* Meditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meditation.swift; sourceTree = "<group>"; };
+		0B545E05293A38540060175C /* GreedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreedView.swift; sourceTree = "<group>"; };
+		0B545E07293A39CC0060175C /* GreedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreedCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				0B545DEF2937CD3B0060175C /* ZenMeditationView.swift */,
+				0B545E05293A38540060175C /* GreedView.swift */,
+				0B545E07293A39CC0060175C /* GreedCard.swift */,
 				0B545DF329391DE50060175C /* PlaybackButton.swift */,
 				0B545DF1293919730060175C /* PlayerView.swift */,
 			);
@@ -204,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B545E06293A38540060175C /* GreedView.swift in Sources */,
 				0B545DE22937C5D40060175C /* ContentView.swift in Sources */,
 				0B545DE02937C5D40060175C /* MooiApp.swift in Sources */,
 				0B545DFA293A15A70060175C /* AudioManager.swift in Sources */,
@@ -213,6 +220,7 @@
 				0B545DF62939FAB90060175C /* ViewModel.swift in Sources */,
 				0B545DF2293919740060175C /* PlayerView.swift in Sources */,
 				0B545DF82939FE000060175C /* Extensions.swift in Sources */,
+				0B545E08293A39CC0060175C /* GreedCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
