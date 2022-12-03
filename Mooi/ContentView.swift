@@ -3,7 +3,7 @@
 //  Mooi
 //
 //  Created by  Mr.Ki on 30.11.2022.
-//
+//5
 
 import SwiftUI
 
@@ -12,6 +12,11 @@ struct ContentView: View {
       //  ZenMeditationView(meditationVM: MeditationViewModel(meditation: Meditation.data))
         
         GreedView()
+       
+       // MorphingCircle()
+        
+        
+        
     }
 }
 

@@ -29,19 +29,17 @@ struct GreedCard: View {
                 Text(meditation.title)
                     .foregroundColor(Color("dark"))
                     .font(.headline)
-                    .bold()
-                    .padding(.vertical, 15)
+                    .padding(.vertical, 10)
             }
             .padding(15)
             .frame(width: 180, alignment: .leading)
-            .background(Color("middle").opacity(0.4))
+            .background(Color("light").opacity(0.4))
             .background(.ultraThickMaterial)
             .cornerRadius(25)
             .scaleEffect(scale)
         }
         .frame(width: 180, height: 250)
         .cornerRadius(25)
-        .shadow(color: Color("light").opacity(0.2), radius: 7, x: 5, y: 5)
         
     }
 }

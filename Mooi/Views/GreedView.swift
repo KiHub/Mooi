@@ -9,26 +9,33 @@ import SwiftUI
 
 struct GreedView: View {
     var array = [Meditation.data, Meditation.data2, Meditation.data3]
-    var colums = [GridItem(.adaptive(minimum: 160), spacing: 15)]
+    var colums = [GridItem(.adaptive(minimum: 120), spacing: 20)]
     var body: some View {
-        NavigationView {
-            ScrollView {
-                LazyVGrid(columns: colums, spacing: 20) {
-                    ForEach(array) { data in
-                        NavigationLink {
-                            ZenMeditationView(meditationVM: MeditationViewModel(meditation: data))
-                                .navigationBarHidden(true)
-                        } label: {
-                            GreedCard(meditation: data)
+        GeometryReader { geometry in
+            ZStack {
+                
+                NavigationView {
+                    ScrollView {
+                        LazyVGrid(columns: colums, spacing: 20) {
+                            ForEach(array) { data in
+                                NavigationLink {
+                                    MeditationView(meditationVM: MeditationViewModel(meditation: data))
+                                        .navigationBarHidden(true)
+                                } label: {
+                                    GreedCard(meditation: data)
+                                }
+                            }
                         }
+                        .offset(x: 0, y: geometry.size.height * 0.25)
+                        .padding()
+                        .navigationBarHidden(true)
+                        .navigationBarBackButtonHidden(true)
                     }
+                    .background(Color("dark"))
                 }
-                .padding()
-                .navigationBarHidden(true)
-                .navigationTitle(" ")
-                .navigationBarBackButtonHidden(true)
+                
+                HeaderView(title: "Hello, User1", subtitle: "Good day for meditation", bgColor: Color("light"))
             }
-            .background(Color("dark"))
         }
     }
 }

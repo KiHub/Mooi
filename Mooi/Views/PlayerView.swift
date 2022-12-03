@@ -13,11 +13,13 @@ struct PlayerView: View {
     var isPreview: Bool = false
     @State private var value: Double = 0.0
     @State private var isEditing: Bool = false
+    @State var opacity = 0.0
     @Environment(\.dismiss) var dismiss
     let timer = Timer.publish(every: 0.5, on: .main, in: .common)
         .autoconnect()
     var body: some View {
         ZStack {
+            
             Image(meditationVM.meditation.image)
                 .resizable()
                 .scaledToFill()
@@ -29,8 +31,26 @@ struct PlayerView: View {
                 .opacity(0.2)
                 .ignoresSafeArea()
             
-                VStack(spacing: 28) {
-                    HStack {
+            Rectangle()
+                .fill(LinearGradient(colors: [Color("dark"), .clear], startPoint: .bottom, endPoint: .top))
+                .opacity(0.9)
+                .ignoresSafeArea()
+            
+            MorphingCircle()
+                .animation(.easeInOut, value: 2)
+                .frame(width: UIScreen.main.bounds.width)
+                .opacity(opacity)
+                .onAppear {
+                    let baseAnimation = Animation.easeInOut(duration: 4)
+                    
+                    withAnimation(baseAnimation) {
+                        opacity = 0.8
+                    }
+                }
+            
+            
+            VStack(spacing: 28) {
+                HStack() {
                     Button {
                         audioManager.stop()
                         dismiss()
@@ -39,13 +59,14 @@ struct PlayerView: View {
                             .font(.system(size: 30))
                             .foregroundColor(Color("light"))
                     }
-                        Spacer()
-                    }
-                    Text(meditationVM.meditation.title)
-                        .font(.title)
-                        .foregroundColor(Color("light"))
                     Spacer()
-                    if let player = audioManager.player {
+                }
+                
+                Text(meditationVM.meditation.title)
+                    .font(.title)
+                    .foregroundColor(Color("light"))
+                Spacer()
+                if let player = audioManager.player {
                     VStack(spacing: 10) {
                         
                         Slider(value: $value, in: 0...player.duration) { editing in
@@ -56,8 +77,7 @@ struct PlayerView: View {
                                 player.currentTime = value
                             }
                         }
-                        
-                            .accentColor(Color("light"))
+                        .accentColor(Color("light"))
                         HStack {
                             Text(DateComponentsFormatter.positional.string(from: player.currentTime) ?? "0:00")
                             Spacer()
@@ -89,11 +109,10 @@ struct PlayerView: View {
                             dismiss()
                         }
                     }
-                    }
                 }
-                .padding()
+            }
+            .padding()
             
-
         }
         .onAppear {
             audioManager.startPlayer(track: meditationVM.meditation.track, isPreview: isPreview)
