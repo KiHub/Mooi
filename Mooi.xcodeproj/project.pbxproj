@@ -26,6 +26,8 @@
 		0B545E10293A85F30060175C /* MorphingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B545E0F293A85F30060175C /* MorphingCircle.swift */; };
 		0B545E12293AB3860060175C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B545E11293AB3850060175C /* HeaderView.swift */; };
 		0B545E14293B42980060175C /* MeditationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B545E13293B42980060175C /* MeditationView.swift */; };
+		0BA27D7D293BCD6B00C6C57E /* GreedCardSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA27D7C293BCD6B00C6C57E /* GreedCardSquare.swift */; };
+		0BA27D7F293BD1B200C6C57E /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA27D7E293BD1B200C6C57E /* TopBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		0B545E0F293A85F30060175C /* MorphingCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorphingCircle.swift; sourceTree = "<group>"; };
 		0B545E11293AB3850060175C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		0B545E13293B42980060175C /* MeditationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationView.swift; sourceTree = "<group>"; };
+		0BA27D7C293BCD6B00C6C57E /* GreedCardSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreedCardSquare.swift; sourceTree = "<group>"; };
+		0BA27D7E293BD1B200C6C57E /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +132,12 @@
 				0B545E13293B42980060175C /* MeditationView.swift */,
 				0B545E05293A38540060175C /* GreedView.swift */,
 				0B545E07293A39CC0060175C /* GreedCard.swift */,
+				0BA27D7C293BCD6B00C6C57E /* GreedCardSquare.swift */,
 				0B545DF329391DE50060175C /* PlaybackButton.swift */,
 				0B545DF1293919730060175C /* PlayerView.swift */,
 				0B545E0F293A85F30060175C /* MorphingCircle.swift */,
 				0B545E11293AB3850060175C /* HeaderView.swift */,
+				0BA27D7E293BD1B200C6C57E /* TopBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BA27D7D293BCD6B00C6C57E /* GreedCardSquare.swift in Sources */,
+				0BA27D7F293BD1B200C6C57E /* TopBar.swift in Sources */,
 				0B545E06293A38540060175C /* GreedView.swift in Sources */,
 				0B545DE22937C5D40060175C /* ContentView.swift in Sources */,
 				0B545DE02937C5D40060175C /* MooiApp.swift in Sources */,

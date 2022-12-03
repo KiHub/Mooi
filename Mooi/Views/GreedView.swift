@@ -15,8 +15,12 @@ struct GreedView: View {
             ZStack {
                 
                 NavigationView {
+                   
                     ScrollView {
-                        LazyVGrid(columns: colums, spacing: 20) {
+                        VStack(spacing: geometry.size.height * 0.05) {
+                        TopBar(array: array)
+                            .foregroundColor(Color("light"))
+                        LazyVGrid(columns: colums, spacing: geometry.size.height * 0.07) {
                             ForEach(array) { data in
                                 NavigationLink {
                                     MeditationView(meditationVM: MeditationViewModel(meditation: data))
@@ -26,10 +30,11 @@ struct GreedView: View {
                                 }
                             }
                         }
-                        .offset(x: 0, y: geometry.size.height * 0.25)
                         .padding()
                         .navigationBarHidden(true)
                         .navigationBarBackButtonHidden(true)
+                        }
+                        .offset(x: 0, y: geometry.size.height * 0.25)
                     }
                     .background(Color("dark"))
                 }

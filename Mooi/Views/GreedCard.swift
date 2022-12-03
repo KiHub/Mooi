@@ -32,13 +32,13 @@ struct GreedCard: View {
                     .padding(.vertical, 10)
             }
             .padding(15)
-            .frame(width: 180, alignment: .leading)
-            .background(Color("light").opacity(0.4))
-            .background(.ultraThickMaterial)
+            .frame(minWidth: 100, idealWidth: 180, maxWidth: 180, alignment: .leading)
+            .background(Color("light").opacity(0.15))
+            .background(.thickMaterial)
             .cornerRadius(25)
             .scaleEffect(scale)
         }
-        .frame(width: 180, height: 250)
+        .frame(minWidth: 100, idealWidth: 180, maxWidth: 180, minHeight: 200, idealHeight: 250, maxHeight: 250)
         .cornerRadius(25)
         
     }
