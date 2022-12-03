@@ -11,7 +11,7 @@ struct HeaderView: View {
     let title: LocalizedStringKey
     let subtitle: LocalizedStringKey
     var bgColor: Color
-    //   @Environment(\.dismiss) var dismiss
+    @State var isPresenting = false
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -48,22 +48,24 @@ struct HeaderView: View {
                     .padding(.leading, 25)
                     .padding(.top, 30)
                     Spacer()
-                    
-                    VStack() {
-                        HStack() {
-                            Button {
-                                // to do
-                            } label: {
-                                Image(systemName: "line.3.horizontal")
-                                    .font(.system(size: 30))
-                                    .foregroundColor(Color("dark"))
+                        VStack() {
+                            HStack() {
+                                Button {
+                                    isPresenting.toggle()
+                                } label: {
+                                    Image(systemName: "line.3.horizontal")
+                                        .font(.system(size: 30))
+                                        .foregroundColor(Color("dark"))
+                                }
+                                .padding(.trailing, 25)
+                                .padding(.top, 30)
+                                .sheet(isPresented: $isPresenting) {
+                                            UserView()
+                                        }
+            
                             }
-                            .padding(.trailing, 25)
-                            .padding(.top, 30)
+                            Spacer()
                         }
-                        Spacer()
-                    }
-                    
                 }
             }
         }

@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var global = Global()
     var body: some View {
       //  ZenMeditationView(meditationVM: MeditationViewModel(meditation: Meditation.data))
         
-        GreedView()
+        if global.onboardingOn {
+            OnboardingManager()
+        } else {
+            GreedView()
+        }
+        
+      //  GreedView()
        
        // MorphingCircle()
         

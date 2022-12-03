@@ -10,8 +10,6 @@ import SwiftUI
 struct TopBar: View {
     let maxHeight = UIScreen.main.bounds.height / 6
     var array: [Meditation]
-   
- //   @State private var searchText: String = ""
     
     var body: some View {
             GeometryReader { proxy in
