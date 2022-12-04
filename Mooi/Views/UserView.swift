@@ -27,6 +27,9 @@ struct UserView: View {
                 Text("\(global.userName), here you can find your achievements")
                     .padding()
                     .foregroundColor(Color("dark"))
+                
+                CalendarView()
+                
                 Spacer()
             }
             .background(Color("light"))

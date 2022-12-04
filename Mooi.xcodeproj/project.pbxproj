@@ -33,6 +33,8 @@
 		0BA27D88293BDEC200C6C57E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA27D84293BDEC200C6C57E /* OnboardingView.swift */; };
 		0BA27D89293BDEC200C6C57E /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA27D85293BDEC200C6C57E /* OnboardingData.swift */; };
 		0BA27D8B293C8EAC00C6C57E /* GradientTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA27D8A293C8EAC00C6C57E /* GradientTextField.swift */; };
+		0BA27D8D293CC96B00C6C57E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BA27D8C293CC96B00C6C57E /* LaunchScreen.storyboard */; };
+		0BA27D8F293CCB3F00C6C57E /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA27D8E293CCB3F00C6C57E /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		0BA27D84293BDEC200C6C57E /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		0BA27D85293BDEC200C6C57E /* OnboardingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
 		0BA27D8A293C8EAC00C6C57E /* GradientTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTextField.swift; sourceTree = "<group>"; };
+		0BA27D8C293CC96B00C6C57E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0BA27D8E293CCB3F00C6C57E /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 				0B545E11293AB3850060175C /* HeaderView.swift */,
 				0BA27D7E293BD1B200C6C57E /* TopBar.swift */,
 				0BA27D80293BD90200C6C57E /* UserView.swift */,
+				0BA27D8E293CCB3F00C6C57E /* CalendarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				0BA27D83293BDEC200C6C57E /* Global.swift */,
+				0BA27D8C293CC96B00C6C57E /* LaunchScreen.storyboard */,
 				0BA27D8A293C8EAC00C6C57E /* GradientTextField.swift */,
 				0BA27D85293BDEC200C6C57E /* OnboardingData.swift */,
 				0BA27D82293BDEC200C6C57E /* OnboardingManager.swift */,
@@ -234,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B545DFC293A1AAB0060175C /* meditation1.mp3 in Resources */,
+				0BA27D8D293CC96B00C6C57E /* LaunchScreen.storyboard in Resources */,
 				0B545DE72937C5D70060175C /* Preview Assets.xcassets in Resources */,
 				0B545DE42937C5D70060175C /* Assets.xcassets in Resources */,
 			);
@@ -248,6 +255,7 @@
 			files = (
 				0BA27D7D293BCD6B00C6C57E /* GreedCardSquare.swift in Sources */,
 				0BA27D8B293C8EAC00C6C57E /* GradientTextField.swift in Sources */,
+				0BA27D8F293CCB3F00C6C57E /* CalendarView.swift in Sources */,
 				0BA27D7F293BD1B200C6C57E /* TopBar.swift in Sources */,
 				0B545E06293A38540060175C /* GreedView.swift in Sources */,
 				0BA27D81293BD90200C6C57E /* UserView.swift in Sources */,
@@ -404,6 +412,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -434,6 +443,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
