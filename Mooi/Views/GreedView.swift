@@ -10,6 +10,7 @@ import SwiftUI
 struct GreedView: View {
     var array = [Meditation.data, Meditation.data2, Meditation.data3]
     var colums = [GridItem(.adaptive(minimum: 120), spacing: 20)]
+    @ObservedObject var global = Global()
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -39,7 +40,7 @@ struct GreedView: View {
                     .background(Color("dark"))
                 }
                 
-                HeaderView(title: "Hello, User1", subtitle: "Good day for meditation", bgColor: Color("light"))
+                HeaderView(title: "Hello, \(global.userName)", subtitle: "Good day for meditation, isn't it?", bgColor: Color("light"))
             }
         }
     }

@@ -47,7 +47,6 @@ struct MorphingCircle: View & Identifiable & Hashable {
     var body: some View {
         ZStack {
         MorphingCircleShape(morph)
-            //.fill(color)
                 .fill(Color("dark"))
                 .opacity(0.5)
             .frame(width: size, height: size, alignment: .center)

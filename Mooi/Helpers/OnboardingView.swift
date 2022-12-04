@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    
+  //  @State var name = ""
     @ObservedObject var global = Global()
+    
     var data: OnboardingData
     @State private var isAnimating: Bool = false
     var body: some View {
@@ -35,7 +36,16 @@ struct OnboardingView: View {
                 .bold()
                 .foregroundColor(Color("dark"))
                 .padding()
-
+                
+                TextField("Name", text: global.$userName)
+                               .textFieldStyle(
+                                   GradientTextFieldBackground(
+                                       systemImageString: "person"
+                                   )
+                               )
+                               .padding(.horizontal, 40)
+                               .opacity(data.on ? 1.0 : 0.0)
+                
             Text(data.secondaryText)
                 .font(.headline)
                 .multilineTextAlignment(.center)
@@ -60,7 +70,8 @@ struct OnboardingView: View {
                             )
                     )
             })
-            .opacity(data.on ? 1.0 : 0.0)
+           // .opacity(data.on ? 1.0 : 0.0)
+            .opacity(global.userName.count != 0 ? 1.0 : 0.0)
             .shadow(radius: 10)
 
             Spacer()

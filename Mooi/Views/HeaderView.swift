@@ -12,6 +12,7 @@ struct HeaderView: View {
     let subtitle: LocalizedStringKey
     var bgColor: Color
     @State var isPresenting = false
+ 
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -33,15 +34,6 @@ struct HeaderView: View {
                             .font(.subheadline)
                             .fontWeight(.regular)
                             .foregroundColor(Color("dark"))
-                        HStack {
-                            Image(systemName: "oval.portrait")
-                                .foregroundColor(Color("dark"))
-                            Image(systemName: "oval.portrait")
-                                .foregroundColor(Color("dark"))
-                            Image(systemName: "oval.portrait")
-                                .foregroundColor(Color("dark"))
-                        }
-                        
                         
                         Spacer()
                     }
@@ -57,6 +49,7 @@ struct HeaderView: View {
                                         .font(.system(size: 30))
                                         .foregroundColor(Color("dark"))
                                 }
+                                
                                 .padding(.trailing, 25)
                                 .padding(.top, 30)
                                 .sheet(isPresented: $isPresenting) {

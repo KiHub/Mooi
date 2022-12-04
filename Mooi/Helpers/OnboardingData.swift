@@ -17,6 +17,6 @@ struct OnboardingData: Hashable, Identifiable {
     
     static let list: [OnboardingData] = [
         OnboardingData(id: 0, backgroundImage: "path", objectImage: "acorn1", primaryText: "Welcome to your Mooi meditation", secondaryText: "Here you can find the perfect music for meditation, work and chill", on: false),
-        OnboardingData(id: 1, backgroundImage: "path", objectImage: "acorn1", primaryText: "Simply choose which track suits your mood", secondaryText: "For easy meditation practice slowly breathe and follow the animated bubbles on the screen", on: true)
+        OnboardingData(id: 1, backgroundImage: "path", objectImage: "acorn1", primaryText: "What's your name?", secondaryText: "For easy meditation practice slowly breathe and follow the animated bubbles on the screen", on: true)
     ]
 }

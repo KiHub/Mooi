@@ -8,24 +8,29 @@
 import SwiftUI
 
 struct UserView: View {
+    @ObservedObject var global = Global()
     @Environment(\.dismiss) var dismiss
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Button {
-                   
-                    dismiss()
-                } label: {
-                    Image(systemName: "xmark.circle.fill")
-                        .font(.system(size: 30))
-                        .foregroundColor(Color("light"))
+            VStack(alignment: .leading) {
+                HStack {
+                    Button {
+                       
+                        dismiss()
+                    } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.system(size: 30))
+                            .foregroundColor(Color("dark"))
+                    }
+                    .padding()
+                    Spacer()
                 }
-                .padding()
+                Text("\(global.userName), here you can find your achievements")
+                    .padding()
+                    .foregroundColor(Color("dark"))
                 Spacer()
             }
-            Spacer()
-        }
-        
+            .background(Color("light"))
+
     }
 }
 
