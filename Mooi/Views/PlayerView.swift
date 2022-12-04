@@ -9,11 +9,13 @@ import SwiftUI
 
 struct PlayerView: View {
     @EnvironmentObject var audioManager: AudioManager
+    @Environment (\.managedObjectContext) var managedObjectContext
     var meditationVM: MeditationViewModel
     var isPreview: Bool = false
     @State private var value: Double = 0.0
     @State private var isEditing: Bool = false
     @State var opacity = 0.0
+    @State var meditationDays: Set<Date> = []
     @Environment(\.dismiss) var dismiss
     let timer = Timer.publish(every: 0.5, on: .main, in: .common)
         .autoconnect()
@@ -116,6 +118,8 @@ struct PlayerView: View {
         }
         .onAppear {
             audioManager.startPlayer(track: meditationVM.meditation.track, isPreview: isPreview)
+            DataManager().addDate(context: managedObjectContext)
+          //  $meditationDays.append(Date())
         }
         .onReceive(timer) { _ in
             guard let player = audioManager.player, !isEditing else {return}

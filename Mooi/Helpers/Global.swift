@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-
 class Global: ObservableObject {
     @AppStorage("showOnboarding") var onboardingOn: Bool = true
     @AppStorage("userName") var userName: String = ""
+
 }
